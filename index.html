@@ -2,33 +2,42 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Bijay Silwal – Remote QA & Security Engineer</title>
+  <title>Bijay Silwal – Senior QA & Security Engineer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Dynamic Remote QA + Security Engineer with 5+ years experience, recognized by Apple, Google, BBC." />
-  <meta property="og:title" content="Bijay Silwal – Remote QA & Security Engineer" />
-  <meta property="og:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote gigs." />
-  <meta property="og:image" content="https://placehold.co/1200x630/0d0d0d/00d4aa?text=Bijay+Silwal+Portfolio" /> <!-- Placeholder for your banner image -->
+  <meta name="description" content="Senior QA Engineer with 5+ years experience in test automation and security testing, recognized by Apple, Google, and BBC." />
+  <meta property="og:title" content="Bijay Silwal – Senior QA & Security Engineer" />
+  <meta property="og:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
+  <meta property="og:image" content="https://placehold.co/1200x630/f8f9fa/00d4aa?text=Bijay+Silwal+Portfolio" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bijay Silwal – Remote QA & Security Engineer" />
-  <meta name="twitter:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote gigs." />
-  <meta name="twitter:image" content="https://placehold.co/1200x630/0d0d0d/00d4aa?text=Bijay+Silwal+Portfolio" /> <!-- Placeholder for your banner image -->
+  <meta name="twitter:title" content="Bijay Silwal – Senior QA & Security Engineer" />
+  <meta name="twitter:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
+  <meta name="twitter:image" content="https://placehold.co/1200x630/f8f9fa/00d4aa?text=Bijay+Silwal+Portfolio" />
 
-  <!-- Google Fonts: Inter for body, SF Mono/Fira Code for terminal -->
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Lucide Icons CDN for modern, crisp icons -->
+  
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
   <style>
     :root {
-      --bg: #0d0d0d;
-      --bg-alt: #1a1a1a; /* Slightly lighter dark for cards/footer */
-      --accent: #00d4aa; /* Bright teal/aqua */
-      --text: #e6e6e6;
-      --muted: #7a7a7a;
+      --bg: #f8f9fa;
+      --bg-alt: #e9ecef;
+      --accent: #00a884;
+      --text: #212529;
+      --muted: #495057;
       --font-mono: 'Fira Code', 'SF Mono', monospace;
       --font-body: 'Inter', sans-serif;
+      --section-padding: 8rem;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     * {
@@ -37,299 +46,478 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-body);
-      scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+    }
+
+    /* Improved Typography */
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
     }
 
     /* Sticky Navbar */
     nav {
-        background-color: rgba(13, 13, 13, 0.9); /* Semi-transparent dark background */
-        backdrop-filter: blur(8px); /* Blur effect */
-        padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(0, 212, 170, 0.1);
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex; /* Ensure horizontal layout */
-        justify-content: center;
-        flex-wrap: wrap; /* Allow items to wrap on small screens */
-        gap: 0.5rem 1.5rem; /* Row gap and column gap */
-    }
-    nav ul li a {
-        color: var(--muted);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease, background-color 0.3s ease;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-    }
-    nav ul li a:hover {
-        color: var(--accent);
-        background-color: rgba(0, 212, 170, 0.05);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(248, 249, 250, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid rgba(0, 168, 132, 0.1);
+      z-index: 100;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
 
-    /* Particle Canvas */
-    #particles {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      opacity: 0.2; /* Make particles more subtle */
+    nav.scrolled {
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      color: var(--accent);
+      background-color: rgba(0, 168, 132, 0.05);
+    }
+
+    nav ul li a.active {
+      color: var(--accent);
+      background-color: rgba(0, 168, 132, 0.1);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     /* Hero Section */
     #hero {
       position: relative;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); /* Subtle gradient */
-      padding-top: 6rem; /* Space for fixed navbar */
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 8rem 2rem 6rem;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-text {
-      z-index: 1;
-      padding: 1rem; /* Add some padding for smaller screens */
+      margin-bottom: 3rem;
     }
 
+    .hero-text h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .hero-text p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: var(--muted);
+    }
+
+    /* Terminal */
     #terminal {
       font-family: var(--font-mono);
       font-size: clamp(1rem, 2.5vw, 1.4rem);
       white-space: pre-wrap;
-      line-height: 1.6; /* Increased line height for readability */
+      line-height: 1.6;
       color: var(--accent);
-      min-height: 10em; /* Ensure terminal takes up space */
-      display: inline-block; /* To allow text-align center */
-      text-align: left; /* Keep terminal text left-aligned within its block */
-      position: relative; /* For blinking cursor */
+      min-height: 10em;
+      display: inline-block;
+      text-align: left;
+      position: relative;
+      margin-bottom: 2rem;
+      background: rgba(0, 168, 132, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 168, 132, 0.1);
+      width: 100%;
+      max-width: 800px;
     }
 
     #terminal::after {
-        content: '_'; /* Blinking cursor */
-        animation: blink-caret 0.75s step-end infinite;
-        font-weight: bold;
+      content: '_';
+      animation: blink-caret 0.75s step-end infinite;
+      font-weight: bold;
     }
 
     @keyframes blink-caret {
-        from, to { color: transparent }
-        50% { color: var(--accent); }
+      from, to { color: transparent }
+      50% { color: var(--accent); }
     }
 
+    /* CTA Buttons */
     .cta {
-      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
     }
 
     .btn {
-      display: inline-flex; /* Use flex for icon alignment */
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin: 1rem .75rem; /* Slightly more margin */
-      padding: .9rem 2rem; /* Larger buttons */
+      padding: 1rem 2rem;
       border: 1px solid var(--accent);
-      border-radius: 8px; /* More rounded */
+      border-radius: 8px;
       color: var(--accent);
       text-decoration: none;
-      transition: .3s ease-in-out;
+      transition: all 0.3s ease;
       font-weight: 600;
       font-size: 1.1rem;
+      min-width: 180px;
     }
 
     .btn.primary {
       background: var(--accent);
-      color: var(--bg);
+      color: white;
     }
 
     .btn:hover {
-      transform: translateY(-4px); /* More pronounced hover */
-      box-shadow: 0 0 20px rgba(0, 212, 170, 0.6); /* Stronger glow */
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 168, 132, 0.2);
     }
+
     .btn.secondary:hover {
-        background: rgba(0, 212, 170, 0.1); /* Subtle background on hover */
-        color: var(--accent);
-        box-shadow: 0 0 10px rgba(0, 212, 170, 0.3); /* Subtle glow for secondary */
+      background: rgba(0, 168, 132, 0.1);
+      color: var(--accent);
     }
 
     /* Scroll Down Indicator */
     .scroll-down-indicator {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-        animation: bounce 2s infinite;
-        z-index: 1;
-    }
-    .scroll-down-indicator svg {
-        margin-top: 0.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0) translateX(-50%);
-        }
-        40% {
-            transform: translateY(-10px) translateX(-50%);
-        }
-        60% {
-            transform: translateY(-5px) translateX(-50%);
-        }
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      animation: bounce 2s infinite;
+      z-index: 10;
+      cursor: pointer;
     }
 
+    .scroll-down-indicator svg {
+      margin-top: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-5px) translateX(-50%);
+      }
+    }
 
     /* Section Styling */
     section {
-      padding: 6rem 8%; /* More vertical padding */
-      max-width: 1200px; /* Max width for content */
-      margin: 0 auto; /* Center sections */
+      padding: var(--section-padding) 8%;
+      position: relative;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Section Dividers */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 168, 132, 0.3), transparent);
+      margin: 0 auto;
+      width: 80%;
+      max-width: 800px;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3rem); /* Responsive heading size */
-      margin-bottom: 2.5rem;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 3rem;
       color: var(--accent);
       text-align: center;
       position: relative;
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
+
     h2::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 3px;
-        background-color: var(--accent);
-        border-radius: 2px;
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--accent);
+      border-radius: 2px;
     }
 
     /* About Section */
+    #about .card {
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--card-shadow);
+    }
+
     #about p {
-        font-size: 1.15rem;
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        color: var(--text);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
     }
-    .llm-output {
-        background: rgba(0, 212, 170, 0.05);
-        border-left: 3px solid var(--accent);
-        padding: 1.5rem;
-        border-radius: 6px;
-        margin-top: 1.5rem;
-        font-family: var(--font-mono);
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: var(--text);
-    }
-    .loading-spinner {
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top-color: var(--accent);
-        animation: spin 1s ease-in-out infinite;
-    }
-    @keyframes spin {
-        to { transform: rotate(360deg); }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
     }
 
     /* Skills Grid */
     .skills-grid {
       display: flex;
-      justify-content: center; /* Center the skill icons */
+      justify-content: center;
       flex-wrap: wrap;
-      gap: 3rem; /* Increased space between icons for larger size */
-    }
-    .skills-grid img {
-        max-width: 120px; /* Increased max size of individual icons */
-        height: auto;
-        transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
-        filter: grayscale(20%); /* Slightly desaturate when not hovered */
-    }
-    .skills-grid img:hover {
-        transform: scale(1.1); /* Scale up on hover */
-        filter: grayscale(0%); /* Full color on hover */
+      gap: 2.5rem;
+      margin: 0 auto;
+      max-width: 1000px;
     }
 
-    /* Projects Cards */
+    .skills-grid img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      filter: grayscale(30%) brightness(1);
+    }
+
+    .skills-grid img:hover {
+      transform: scale(1.15);
+      filter: grayscale(0%) brightness(1.1);
+    }
+
+    /* Experience Cards */
     .cards {
       display: grid;
-      gap: 2rem; /* More gap between cards */
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger min width */
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
 
     .card {
-      background: var(--bg-alt);
-      padding: 2rem; /* More padding */
-      border-left: 4px solid var(--accent); /* Thicker border */
-      border-radius: 10px; /* More rounded */
-      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-      display: flex; /* Use flex for internal layout */
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%; /* Ensure cards are same height in grid */
-    }
-    .card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: var(--text);
-    }
-    .card p {
-        color: var(--muted);
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
-    .card:hover {
-        transform: translateY(-8px); /* More pronounced hover */
-        box-shadow: 0 15px 30px rgba(0, 212, 170, 0.2); /* Stronger glow */
-        border-color: var(--accent); /* Accent border on hover */
-    }
-
-    /* Stats Grid */
-    #stats {
-        background: var(--bg-alt); /* Different background for stats section */
-        text-align: center;
-    }
-    .stats-grid {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
+      transition: all 0.3s ease;
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 3rem; /* More space */
+      flex-direction: column;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .card .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .card ul {
+      list-style-type: none;
+      margin-bottom: 2rem;
+    }
+
+    .card ul li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 168, 132, 0.1);
+    }
+
+    /* Stats Section */
+    #stats {
+      background: var(--bg-alt);
       text-align: center;
+      padding: 6rem 8%;
     }
 
-    .stats-grid > div {
-        font-size: 1.2rem;
-        color: var(--text);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .stats-grid span {
-      font-size: 3.5rem; /* Larger numbers */
+    .stat-item {
+      padding: 2rem;
+      background: rgba(0, 168, 132, 0.05);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      background: rgba(0, 168, 132, 0.1);
+    }
+
+    .stat-item span {
+      font-size: 3.5rem;
       color: var(--accent);
       font-family: var(--font-mono);
       font-weight: 700;
-      line-height: 1;
+      display: block;
       margin-bottom: 0.5rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      position: relative;
+      border: 1px solid rgba(0, 168, 132, 0.1);
+      box-shadow: var(--card-shadow);
+    }
+
+    .testimonial::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 4rem;
+      color: rgba(0, 168, 132, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-author img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      object-fit: cover;
+    }
+
+    .author-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    /* Contact Section */
+    #contact .card {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
     }
 
     /* Footer */
@@ -337,306 +525,527 @@
       text-align: center;
       padding: 4rem 8%;
       background: var(--bg-alt);
-      border-top: 1px solid rgba(0, 212, 170, 0.1); /* Subtle top border */
+      border-top: 1px solid rgba(0, 168, 132, 0.1);
     }
-    footer p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        color: var(--text);
-        font-style: italic;
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .social-links a {
+      color: var(--muted);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     /* Back to Top Button */
     #back-to-top {
-        position: fixed;
-        bottom: 2rem;
-        right: 2rem;
-        background: var(--accent);
-        color: var(--bg);
-        border-radius: 50%;
-        width: 3.5rem;
-        height: 3.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 999;
-    }
-    #back-to-top.show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-    #back-to-top:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 15px rgba(0, 212, 170, 0.6);
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      width: 3.5rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 168, 132, 0.3);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 999;
+      cursor: pointer;
+      border: none;
     }
 
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #back-to-top:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 168, 132, 0.4);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
 
     /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .btn {
-        padding: .75rem 1.5rem;
-        font-size: 1rem;
-        margin: 0.75rem 0.5rem;
-      }
-      h2 {
-        font-size: 2.2rem;
-      }
-      section {
-        padding: 4rem 5%;
-      }
-      .stats-grid {
-        gap: 2rem;
-      }
-      .stats-grid span {
-        font-size: 3rem;
-      }
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-      }
-      nav ul li a {
-        padding: 0.4rem 0.8rem;
+    @media (max-width: 1024px) {
+      :root {
+        --section-padding: 6rem;
       }
     }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-padding: 5rem;
+      }
+
+      nav {
+        padding: 1rem;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        box-shadow: var(--card-shadow);
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      #terminal {
+        padding: 1.5rem;
+      }
+    }
+
     @media (max-width: 480px) {
-        .cta {
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .btn {
-            width: 80%; /* Make buttons full width on small screens */
-            max-width: 250px;
-            margin: 0.5rem auto;
-        }
-        #terminal {
-            font-size: 0.9rem;
-        }
-        #back-to-top {
-            bottom: 1rem;
-            right: 1rem;
-            width: 3rem;
-            height: 3rem;
-        }
+      :root {
+        --section-padding: 4rem;
+      }
+
+      section {
+        padding: var(--section-padding) 5%;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      #about .card,
+      .card {
+        padding: 1.5rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #back-to-top {
+        width: 3rem;
+        height: 3rem;
+        bottom: 1rem;
+        right: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Sticky Navbar -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-[#0d0d0d]/90 backdrop-blur px-8 py-4">
-    <ul class="flex justify-center space-x-6 text-sm text-gray-400">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#stats">Impact</a></li>
-      <li><a href="#credentials">Credentials</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav id="navbar">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#stats" class="nav-link">Impact</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero Section -->
   <header id="hero">
-    <canvas id="particles"></canvas>
-    <div class="hero-text">
-      <pre id="terminal"></pre>
-      <div class="cta flex flex-wrap justify-center">
-        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me"><i data-lucide="mail" class="w-5 h-5 mr-2"></i> Hire Me</a>
-        <a href="https://linkedin.com/in/bijaysilwal" target="_blank" class="btn secondary" aria-label="LinkedIn Profile"><i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn</a>
-        <a href="https://github.com/your-github-profile" target="_blank" class="btn secondary" aria-label="GitHub Profile"><i data-lucide="github" class="w-5 h-5 mr-2"></i> GitHub</a>
-        <a href="assets/resume.pdf" target="_blank" class="btn secondary" aria-label="Download Resume"><i data-lucide="file-text" class="w-5 h-5 mr-2"></i> Resume</a>
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <h1>Bijay Silwal</h1>
+        <p>Senior QA Engineer specializing in test automation and security testing</p>
+        <pre id="terminal"></pre>
+      </div>
+      <div class="cta fade-in" style="animation-delay: 0.3s;">
+        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me">
+          <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Contact Me
+        </a>
+        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" class="btn secondary" aria-label="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn
+        </a>
+        <a href="#credentials" class="btn secondary" aria-label="View CV">
+          <i data-lucide="file-text" class="w-5 h-5 mr-2"></i> View CV
+        </a>
       </div>
     </div>
-    <a href="#about" class="scroll-down-indicator">
-        Scroll Down
-        <svg data-lucide="chevron-down"></svg>
+    <a href="#about" class="scroll-down-indicator" aria-label="Scroll down">
+      Scroll Down
+      <svg data-lucide="chevron-down"></svg>
     </a>
   </header>
 
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
   <!-- ABOUT ME -->
   <section id="about">
-      <h2>About Bijay</h2>
-      <div class="card">
-          <p id="about-me-text">
-              With 5+ years of global experience, I am a dynamic and impact-driven QA Engineer specializing in manual, automation, API, and security testing within Agile and DevSecOps environments. My career is marked by leading high-value QA transformations, pioneering scalable test automation frameworks, and championing security-first practices.
-          </p>
-          <p>
-              I am recognized by global tech leaders like <strong style="color: var(--accent);">Apple, Google, and BBC</strong> for exceptional security research, demonstrating a proactive approach to vulnerability identification. Adept at working independently and cross-functionally in distributed, multicultural teams, I am committed to delivering quality at speed in both on-premise and cloud-native (SaaS) ecosystems, making me an ideal candidate for remote roles.
-          </p>
-          <button class="btn secondary mt-6" onclick="summarizeAboutMe()"><i data-lucide="sparkles" class="w-5 h-5 mr-2"></i> Summarize My Profile</button>
-          <div id="about-loading" class="hidden mt-4 text-center text-sm text-gray-400">
-              <span class="loading-spinner"></span> Generating summary...
-          </div>
-          <div id="about-summary-output" class="llm-output hidden"></div>
-      </div>
+    <h2 class="fade-in">Professional Profile</h2>
+    <div class="card fade-in">
+      <p>
+        Dynamic and impact-driven <span class="highlight">QA Engineer with 5+ years</span> of global experience across manual, automation, API, and security testing in Agile and DevSecOps environments. Demonstrated success in leading high-value QA transformations, pioneering test automation frameworks, and championing security-first QA practices.
+      </p>
+      <p>
+        Recognized by global tech leaders such as <span class="highlight">Apple, Google, and BBC</span> for exceptional security research. Adept at working independently and cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and cloud-native (SaaS) ecosystems.
+      </p>
+      <p>
+        My expertise spans from implementing scalable test automation frameworks to identifying critical security vulnerabilities, with a proven track record of improving testing efficiency by 30% or more across multiple organizations.
+      </p>
+    </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- SKILLS -->
   <section id="skills">
-    <h2>Skill Constellation</h2>
-    <div class="skills-grid">
-      <img src="https://skillicons.dev/icons?i=playwright,python,docker,aws,burp,jenkins,typescript,linux,go,git,jira,postman,figma,vscode,gcp" alt="skills"/>
+    <h2 class="fade-in">Technical Skills</h2>
+    <div class="skills-grid fade-in" style="animation-delay: 0.2s;">
+      <img src="https://skillicons.dev/icons?i=playwright" alt="Playwright" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=python" alt="Python" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=docker" alt="Docker" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=aws" alt="AWS" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=burp" alt="Burp Suite" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=jenkins" alt="Jenkins" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=linux" alt="Linux" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=go" alt="Go" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=git" alt="Git" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=jira" alt="Jira" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=postman" alt="Postman" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=figma" alt="Figma" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" loading="lazy" />
+      <img src="https://skillicons.dev/icons?i=gcp" alt="Google Cloud" loading="lazy" />
     </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- PROFESSIONAL EXPERIENCE -->
   <section id="experience">
-      <h2>Professional Journey</h2>
-      <div class="cards">
-          <div class="card">
-              <h3>QA Engineer - LogPoint</h3>
-              <p class="text-sm text-gray-500 mb-4">Dec 2022 - Present</p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2 text-base">
-                  <li>**Playwright Migration:** Led migration from Robot Framework to Playwright + TypeScript, reducing regression time by 30% and increasing test coverage by 30%.</li>
-                  <li>**Vulnerability Identification:** Proactively identified over 50+ critical vulnerabilities through manual, API, and security testing of SIEM/SOAR features.</li>
-                  <li>**CI/CD Automation:** Drove full automation of SaaS release pipelines with smoke testing, enabling faster and safer rollouts.</li>
-                  <li>**QA Innovation:** Initiated and led QA Idea Portal, executing 15+ enhancements including Docker-based automation and Jenkins deployment jobs.</li>
-                  <li>**Mentorship & Documentation:** Authored centralized technical documentation and mentored peers, fostering knowledge transparency.</li>
-              </ul>
-          </div>
-          <div class="card">
-              <h3>Associate Software QA Engineer - CloudFactory</h3>
-              <p class="text-sm text-gray-500 mb-4">Feb 2022 - Nov 2022</p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2 text-base">
-                  <li>**High Defect Detection:** Delivered high-quality testing for APIs, infrastructure, and frontend systems with a 95%+ defect detection rate.</li>
-                  <li>**OWASP Mitigation:** Contributed to web security validation, mitigating OWASP vulnerabilities using Burp Suite and OWASP ZAP.</li>
-                  <li>**Rapid Iteration:** Led deployment testing and feedback cycles post-release, ensuring low customer defect rates.</li>
-              </ul>
-          </div>
-          <div class="card">
-              <h3>Security Researcher (Freelance)</h3>
-              <p class="text-sm text-gray-500 mb-4">Jun 2019 - Present | Remote Engagements</p>
-              <ul class="list-disc list-inside text-gray-300 space-y-2 text-base">
-                  <li>**Hall of Fame Recognition:** Reported 30+ critical vulnerabilities across Google, Apple, Huawei, and BBC, earning Hall of Fame mentions and bounties.</li>
-                  <li>**OWASP Top 10 Specialization:** Expertise in XSS, SQLI, CORS, IDOR, and Auth flaws; collaborated on remediation.</li>
-                  <li>**Detailed Reporting:** Created comprehensive vulnerability reports, mitigation recommendations, and proof-of-concept exploits.</li>
-              </ul>
-              <button class="btn secondary mt-6" onclick="explainOWASP()"><i data-lucide="sparkles" class="w-5 h-5 mr-2"></i> Explain OWASP Top 10</button>
-              <div id="security-loading" class="hidden mt-4 text-center text-sm text-gray-400">
-                  <span class="loading-spinner"></span> Generating explanation...
-              </div>
-              <div id="security-explanation-output" class="llm-output hidden"></div>
-          </div>
+    <h2 class="fade-in">Professional Experience</h2>
+    <div class="cards">
+      <div class="card fade-in">
+        <h3>QA Engineer – LogPoint</h3>
+        <span class="date">December 2022 – Present</span>
+        <ul>
+          <li>Spearheaded the migration from legacy Robot Framework to a scalable Playwright + TypeScript automation framework, reducing regression time by 30% and increasing test coverage by 30%</li>
+          <li>Developed robust automation for critical business workflows including RBAC, log search, repository creation, and normalization across both on-prem and SaaS deployments</li>
+          <li>Conducted comprehensive manual, API, and security testing of SIEM/SOAR features, identifying over 50+ critical vulnerabilities in distributed environments</li>
+          <li>Engineered custom Postfix-based SMTP testing tools and authored centralized technical documentation to enhance organization-wide knowledge sharing</li>
+          <li>Established and led the QA Idea Portal, implementing 15+ scalable QA enhancements including Docker-based automation and Jenkins deployment jobs</li>
+          <li>Automated SaaS release pipelines with integrated smoke testing, reducing deployment risks and enabling faster rollouts</li>
+          <li>Investigated infrastructure bottlenecks and proposed containerization strategies using Docker and parallel execution with Pabot</li>
+        </ul>
       </div>
+      <div class="card fade-in" style="animation-delay: 0.2s;">
+        <h3>Associate Software QA Engineer – CloudFactory</h3>
+        <span class="date">February 2022 – November 2022</span>
+        <ul>
+          <li>Executed high-quality testing for APIs, infrastructure, and frontend systems with a 95%+ defect detection rate</li>
+          <li>Conducted web security validation using Burp Suite and OWASP ZAP, effectively mitigating OWASP vulnerabilities</li>
+          <li>Led post-release deployment testing and feedback cycles, ensuring rapid iteration and maintaining low customer defect rates</li>
+        </ul>
+      </div>
+      <div class="card fade-in" style="animation-delay: 0.4s;">
+        <h3>Security Researcher (Freelance)</h3>
+        <span class="date">June 2019 – Present</span>
+        <ul>
+          <li>Discovered and reported 30+ critical vulnerabilities for tech giants including Google, Apple, Huawei, and BBC, earning Hall of Fame recognition and bounties</li>
+          <li>Specialized in OWASP Top 10 vulnerabilities including XSS, CORS, IDOR, and authentication flaws, collaborating with security teams on remediation</li>
+          <li>Created comprehensive vulnerability reports with detailed mitigation recommendations and proof-of-concept exploits</li>
+          <li><strong>Key Achievements:</strong>
+            <ul style="margin-top: 0.5rem;">
+              <li>Apple: Discovered sensitive CORS misconfigurations protecting confidential APIs</li>
+              <li>Google: Prevented iframe injection in internal collaboration tools</li>
+              <li>BBC: Identified and patched HTML injection paths preventing brand risks</li>
+              <li>Huawei: Uncovered sensitive asset exposure in internal DevOps systems</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Key Initiatives & Projects</h2>
+    <h2 class="fade-in">Key Projects</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card fade-in">
         <h3>Playwright Migration & Optimization</h3>
-        <p>Piloted migration from Robot Framework to Playwright + TypeScript, reducing regression time by 30% and increasing modular test coverage by 30%. Presented roadmap to leadership and enforced a Shift-left approach.</p>
+        <p>Led the strategic migration from Robot Framework to Playwright with TypeScript, including:</p>
+        <ul>
+          <li>Developed a comprehensive roadmap and presented to leadership</li>
+          <li>Created detailed test case documentation and enforcement protocols</li>
+          <li>Implemented a Shift-left approach that reduced regression time by 30%</li>
+          <li>Increased modular test coverage by 30% through framework improvements</li>
+        </ul>
       </div>
-      <div class="card">
+      <div class="card fade-in" style="animation-delay: 0.2s;">
         <h3>SMTP Testing Tool Development</h3>
-        <p>Built a custom Postfix-based SMTP testing tool, achieving zero false-positives in complex email flows and contributing to organization-wide knowledge transparency.</p>
+        <p>Designed and built a custom Postfix-based SMTP testing solution featuring:</p>
+        <ul>
+          <li>Zero false-positives in complex email flow testing</li>
+          <li>Comprehensive documentation for organization-wide adoption</li>
+          <li>Integration with existing CI/CD pipelines</li>
+          <li>Demonstrated to multiple teams through knowledge-sharing sessions</li>
+        </ul>
       </div>
-      <div class="card">
+      <div class="card fade-in" style="animation-delay: 0.4s;">
         <h3>Docker Automation Feasibility Study</h3>
-        <p>Conducted an in-depth study highlighting pros, cons, and compatibility issues of Docker automation with LogPoint infrastructure, informing key strategic decisions for containerization and parallel execution.</p>
+        <p>Conducted an in-depth technical assessment of Docker automation including:</p>
+        <ul>
+          <li>Detailed analysis of compatibility with LogPoint infrastructure</li>
+          <li>Comprehensive pros/cons evaluation for containerization</li>
+          <li>Parallel execution strategies using Pabot</li>
+          <li>Presented findings to engineering leadership to inform strategic decisions</li>
+        </ul>
       </div>
-      <div class="card">
-        <h3>Bug Bounty Platform Feedback</h3>
-        <p>Provided valuable UX and feature comparisons for leading bug bounty platforms like Bugcrowd, contributing to platform improvement discussions and community insights.</p>
+      <div class="card fade-in" style="animation-delay: 0.6s;">
+        <h3>Security Research & Bug Bounty</h3>
+        <p>Significant security discoveries and contributions:</p>
+        <ul>
+          <li>Identified XSS, SQLi, CORS, and IDOR vulnerabilities in real-world applications</li>
+          <li>Provided UX and feature analysis for Bugcrowd platform improvements</li>
+          <li>Created detailed vulnerability reports with PoC exploits</li>
+          <li>Collaborated with security teams on remediation strategies</li>
+        </ul>
       </div>
     </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- STATS -->
   <section id="stats">
-    <h2>Impact at a Glance</h2>
-    <div class="stats-grid">
-      <div><span id="stat1">30+</span> Critical Vulnerabilities Identified</div>
-      <div><span id="stat2">50+</span> Automated Pipelines Driven</div>
-      <div><span id="stat3">95 %</span> Defect Detection Rate</div>
+    <h2 class="fade-in">Professional Impact</h2>
+    <div class="stats-grid fade-in">
+      <div class="stat-item">
+        <span id="stat1">30+</span>
+        Critical Vulnerabilities Identified
+      </div>
+      <div class="stat-item">
+        <span id="stat2">50+</span>
+        Automated Pipelines Implemented
+      </div>
+      <div class="stat-item">
+        <span id="stat3">95%</span>
+        Defect Detection Rate
+      </div>
+      <div class="stat-item">
+        <span id="stat4">30%</span>
+        Efficiency Improvements
+      </div>
     </div>
   </section>
 
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2 class="fade-in">Professional Endorsements</h2>
+    <div class="testimonials fade-in">
+      <div class="testimonial">
+        <div class="testimonial-content">
+          <p>"Bijay's automation framework migration to Playwright transformed our testing capabilities. His technical expertise and leadership in implementing the new framework resulted in a 30% reduction in regression time while increasing coverage. His ability to present complex technical concepts to leadership was particularly impressive."</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://placehold.co/100x100/e9ecef/00a884?text=NM" alt="Niraj Maharjan" loading="lazy" />
+          <div class="author-info">
+            <h4>Niraj Maharjan</h4>
+            <p>Engineering Manager, LogPoint</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial" style="animation-delay: 0.2s;">
+        <div class="testimonial-content">
+          <p>"The SMTP testing tool Bijay developed became an essential part of our QA infrastructure. His solution eliminated false positives in our email testing and his documentation made it easy for the entire team to adopt. His contributions to our knowledge-sharing culture have had lasting impact."</p>
+        </div>
+        <div class="testimonial-author">
+          <img src="https://placehold.co/100x100/e9ecef/00a884?text=UK" alt="Ujjwal Karna" loading="lazy" />
+          <div class="author-info">
+            <h4>Ujjwal Karna</h4>
+            <p>QA Lead, LogPoint</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
   <!-- CERTIFICATIONS & EDUCATION -->
   <section id="credentials">
-      <h2>Credentials & Education</h2>
-      <div class="cards">
-          <div class="card">
-              <h3><i data-lucide="award" class="w-6 h-6 mr-2 inline-block"></i> Certifications</h3>
-              <ul class="list-disc list-inside text-gray-300 space-y-2 text-base">
-                  <li>Practical Network Penetration Tester (PNPT) - The Cyber Mentor (Oct 2021)</li>
-                  <li>AWS Solution Architect Associate (In Progress)</li>
-              </ul>
-          </div>
-          <div class="card">
-              <h3><i data-lucide="graduation-cap" class="w-6 h-6 mr-2 inline-block"></i> Education</h3>
-              <p class="text-base text-gray-300">Bachelor in Science, Computer Science and Information Technology - Patan Multiple Campus, Tribhuvan University (2016-2020, delayed graduation: 2021 due to COVID)</p>
-          </div>
+    <h2 class="fade-in">Credentials</h2>
+    <div class="cards">
+      <div class="card fade-in">
+        <h3><i data-lucide="award" class="w-6 h-6 mr-2 inline-block"></i> Certifications</h3>
+        <ul>
+          <li><strong>Practical Network Penetration Tester (PNPT)</strong> - The Cyber Mentor (October 2021)</li>
+          <li><strong>AWS Solution Architect Associate</strong> - In Progress</li>
+        </ul>
+        <h3 class="mt-6"><i data-lucide="file-text" class="w-6 h-6 mr-2 inline-block"></i> Curriculum Vitae</h3>
+        <p class="mt-2">Download my complete CV for detailed professional history:</p>
+        <a href="Bijay_Silwal_QA_CV_2025.pdf" download class="btn primary mt-4" aria-label="Download CV">
+          <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download CV (PDF)
+        </a>
       </div>
+      <div class="card fade-in" style="animation-delay: 0.2s;">
+        <h3><i data-lucide="graduation-cap" class="w-6 h-6 mr-2 inline-block"></i> Education</h3>
+        <p><strong>Bachelor of Science, Computer Science and Information Technology</strong><br>
+        Patan Multiple Campus, Tribhuvan University (2016–2020)<br>
+        <em>Graduation delayed to 2021 due to COVID-19</em></p>
+      </div>
+    </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- PERSONAL INTERESTS -->
   <section id="interests">
-      <h2>Beyond the Professional</h2>
-      <div class="card">
-          <ul class="list-disc list-inside text-gray-300 grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
-              <li class="flex items-center"><i data-lucide="gamepad" class="w-5 h-5 mr-3"></i>Cybersecurity CTFs (TryHackMe, HackTheBox)</li>
-              <li class="flex items-center"><i data-lucide="wrench" class="w-5 h-5 mr-3"></i>Building automation tools and productivity scripts</li>
-              <li class="flex items-center"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i>Books, philosophy, travel documentaries</li>
-              <li class="flex items-center"><i data-lucide="mountain" class="w-5 h-5 mr-3"></i>Playing football, hiking, and nature biking</li>
-          </ul>
-      </div>
+    <h2 class="fade-in">Beyond Work</h2>
+    <div class="card fade-in">
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li class="flex items-center"><i data-lucide="shield" class="w-5 h-5 mr-3"></i> Cybersecurity CTFs (TryHackMe, HackTheBox)</li>
+        <li class="flex items-center"><i data-lucide="code" class="w-5 h-5 mr-3"></i> Building automation tools and productivity scripts</li>
+        <li class="flex items-center"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i> Technology books, philosophy, documentaries</li>
+        <li class="flex items-center"><i data-lucide="football" class="w-5 h-5 mr-3"></i> Football, hiking, and outdoor activities</li>
+      </ul>
+    </div>
   </section>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Let's Connect</h2>
-    <div class="card">
-      <p class="text-lg leading-relaxed mb-4 text-gray-300">
-        I am actively seeking challenging remote, part-time, or full-time opportunities where I can leverage my expertise in QA, automation, and security to drive significant impact.
+    <h2 class="fade-in">Get In Touch</h2>
+    <div class="card fade-in">
+      <p class="text-center mb-6">
+        I'm currently exploring new opportunities where I can leverage my expertise in QA automation and security testing. Whether you have a project to discuss or just want to connect, feel free to reach out.
       </p>
-      <p class="text-lg leading-relaxed mb-6 text-gray-300">
-        Feel free to reach out for collaborations, discussions, or potential roles.
-      </p>
-      <p class="text-base text-gray-300 mb-2"><i data-lucide="mail" class="w-5 h-5 mr-2 inline-block align-middle"></i> Email: <a href="mailto:silwalbijay197@gmail.com" class="text-accent hover:underline">silwalbijay197@gmail.com</a></p>
-      <p class="text-base text-gray-300 mb-2"><i data-lucide="linkedin" class="w-5 h-5 mr-2 inline-block align-middle"></i> LinkedIn: <a href="https://linkedin.com/in/bijaysilwal" target="_blank" class="text-accent hover:underline">linkedin.com/in/bijaysilwal</a></p>
-      <p class="text-base text-gray-300"><i data-lucide="calendar" class="w-5 h-5 mr-2 inline-block align-middle"></i> Calendly: <a href="https://calendly.com/bijaysilwal" target="_blank" class="text-accent hover:underline">Book a call</a></p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <a href="mailto:silwalbijay197@gmail.com" class="hover:text-accent">silwalbijay197@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="phone" class="w-5 h-5"></i>
+          <span>+977-9843-415731</span>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+          <a href="https://linkedin.com/in/bijay-silwal" target="_blank" class="hover:text-accent">linkedin.com/in/bijay-silwal</a>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+          <span>Godavari, Lalitpur, Nepal</span>
+        </div>
+      </div>
+      <div class="cta mt-8">
+        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Email Me">
+          <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Email Me
+        </a>
+        <a href="https://calendly.com/bijaysilwal" target="_blank" class="btn secondary" aria-label="Schedule Call">
+          <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> Schedule Call
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>“I turn QA bottlenecks into DevSecOps accelerators.”</p>
-    <div class="cta flex flex-wrap justify-center">
-      <a href="https://calendly.com/bijaysilwal" target="_blank" class="btn primary" aria-label="Book a Call">
-        <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> Book a Call
+  <footer class="fade-in">
+    <div class="social-links">
+      <a href="https://linkedin.com/in/bijay-silwal" target="_blank" aria-label="LinkedIn">
+        <i data-lucide="linkedin"></i>
       </a>
-      <a href="assets/resume.pdf" target="_blank" class="btn secondary" aria-label="Resume PDF">
-        <i data-lucide="file-text" class="w-5 h-5 mr-2"></i> Resume PDF
+      <a href="https://github.com/your-github-profile" target="_blank" aria-label="GitHub">
+        <i data-lucide="github"></i>
+      </a>
+      <a href="mailto:silwalbijay197@gmail.com" aria-label="Email">
+        <i data-lucide="mail"></i>
       </a>
     </div>
-    <p class="text-sm text-gray-500 mt-4">&copy; 2024 Bijay Silwal. All rights reserved.</p>
+    <p class="copyright">© 2025 Bijay Silwal. All rights reserved.</p>
   </footer>
 
   <!-- Back to Top Button -->
-  <a href="#hero" id="back-to-top" class="hidden">
-      <svg data-lucide="chevron-up" class="w-8 h-8"></svg>
-  </a>
+  <button id="back-to-top" aria-label="Back to top">
+    <svg data-lucide="chevron-up" class="w-8 h-8"></svg>
+  </button>
 
   <script>
+    // Initialize Lucide icons
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+
     // --- Terminal typing effect
     const lines = [
       '$ whoami',
-      'Bijay Silwal — 5★ Remote QA Engineer',
+      'Bijay Silwal — Senior QA Engineer',
       '',
-      '$ specialities',
-      '→ Test Automation | → Security Testing | → DevSecOps Pipelines',
+      '$ expertise',
+      '→ Test Automation | → Security Testing | → DevSecOps',
       '',
       '$ status',
-      '[ Available for Remote / Part-time / Full-time ]',
+      '[ Available for Remote Opportunities ]',
       ''
     ];
     let lineIndex = 0, charIndex = 0;
@@ -654,182 +1063,161 @@
         }
       }
     }
-    // Start typing effect on window load
+
+    // Start typing effect
     window.onload = function() {
-        type();
-        lucide.createIcons(); // Initialize Lucide icons after DOM is ready
+      type();
+      
+      // Initialize animations
+      initAnimations();
+      
+      // Initialize mobile menu
+      initMobileMenu();
+      
+      // Initialize scroll events
+      initScrollEvents();
     };
 
-
-    // --- Particles
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
-    const particleCount = 100; // Increased particle count for more density
-
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5; // Slightly faster movement
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.radius = Math.random() * 1.8 + 0.7; // Slightly larger particles
-      }
-      draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#00d4aa44'; /* Slightly more opaque */
-        ctx.fill();
-      }
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-        this.draw();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) particles.push(new Particle());
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => p.update());
-      requestAnimationFrame(animate);
-    }
-    animate();
-
-
-    // --- LLM Integration Functions ---
-
-    // Function to summarize About Me section
-    async function summarizeAboutMe() {
-        const aboutTextElement = document.getElementById('about-me-text');
-        const summaryOutputElement = document.getElementById('about-summary-output');
-        const loadingElement = document.getElementById('about-loading');
-
-        if (!aboutTextElement || !summaryOutputElement || !loadingElement) {
-            console.error("Required elements not found for summarization.");
-            return;
-        }
-
-        loadingElement.classList.remove('hidden');
-        summaryOutputElement.classList.add('hidden');
-        summaryOutputElement.innerHTML = ''; // Clear previous content
-
-        const prompt = `Summarize the following text about a QA Engineer's profile concisely, focusing on key skills, experience, and impact, for a professional audience, in about 3-4 sentences:\n\n"${aboutTextElement.innerText}"`;
-
-        let chatHistory = [];
-        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-        const payload = { contents: chatHistory };
-        const apiKey = ""; // Canvas will automatically provide this
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            const result = await response.json();
-
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                const text = result.candidates[0].content.parts[0].text;
-                summaryOutputElement.innerText = text;
-                summaryOutputElement.classList.remove('hidden');
-            } else {
-                summaryOutputElement.innerText = "Error: Could not generate summary. Please try again.";
-                summaryOutputElement.classList.remove('hidden');
-                console.error("Unexpected API response structure:", result);
-            }
-        } catch (error) {
-            summaryOutputElement.innerText = "Error: Failed to connect to the summarization service.";
-            summaryOutputElement.classList.remove('hidden');
-            console.error("Fetch error:", error);
-        } finally {
-            loadingElement.classList.add('hidden');
-        }
-    }
-
-    // Function to explain OWASP Top 10
-    async function explainOWASP() {
-        const explanationOutputElement = document.getElementById('security-explanation-output');
-        const loadingElement = document.getElementById('security-loading');
-
-        if (!explanationOutputElement || !loadingElement) {
-            console.error("Required elements not found for vulnerability explanation.");
-            return;
-        }
-
-        loadingElement.classList.remove('hidden');
-        explanationOutputElement.classList.add('hidden');
-        explanationOutputElement.innerHTML = ''; // Clear previous content
-
-        const prompt = `Provide a very brief, high-level explanation of what the OWASP Top 10 is and why it's important in cybersecurity, in about 3-4 sentences. Focus on its role as a standard for web application security.`;
-
-        let chatHistory = [];
-        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-        const payload = { contents: chatHistory };
-        const apiKey = ""; // Canvas will automatically provide this
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            const result = await response.json();
-
-            if (result.candidates && result.candidates.length > 0 &&
-                result.candidates[0].content && result.candidates[0].content.parts &&
-                result.candidates[0].content.parts.length > 0) {
-                const text = result.candidates[0].content.parts[0].text;
-                explanationOutputElement.innerText = text;
-                explanationOutputElement.classList.remove('hidden');
-            } else {
-                explanationOutputElement.innerText = "Error: Could not generate explanation. Please try again.";
-                explanationOutputElement.classList.remove('hidden');
-                console.error("Unexpected API response structure:", result);
-            }
-        } catch (error) {
-            explanationOutputElement.innerText = "Error: Failed to connect to the explanation service.";
-            explanationOutputElement.classList.remove('hidden');
-            console.error("Fetch error:", error);
-        } finally {
-            loadingElement.classList.add('hidden');
-        }
-    }
-
-    // --- Back to Top Button Logic ---
-    const backToTopButton = document.getElementById('back-to-top');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
-            backToTopButton.classList.add('show');
+    // --- Mobile Menu Toggle
+    function initMobileMenu() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      
+      menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+        const icon = menuToggle.querySelector('i');
+        if (navMenu.classList.contains('show')) {
+          icon.setAttribute('data-lucide', 'x');
         } else {
-            backToTopButton.classList.remove('show');
+          icon.setAttribute('data-lucide', 'menu');
         }
-    });
+        lucide.createIcons();
+      });
+      
+      // Close menu when clicking on a link
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('show');
+          const icon = menuToggle.querySelector('i');
+          icon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        });
+      });
+    }
 
-    backToTopButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    // --- Scroll Events
+    function initScrollEvents() {
+      // Navbar scroll effect
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        if (window.scrollY > 300) {
+          backToTopButton.classList.add('show');
+        } else {
+          backToTopButton.classList.remove('show');
+        }
+        
+        // Active nav link
+        document.querySelectorAll('section').forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav-link').forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
 
+    // --- Animations
+    function initAnimations() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+            fadeInObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        fadeInObserver.observe(element);
+      });
+    }
+
+    // Stats counter animation
+    function animateStats() {
+      const stat1 = document.getElementById('stat1');
+      const stat2 = document.getElementById('stat2');
+      const stat3 = document.getElementById('stat3');
+      const stat4 = document.getElementById('stat4');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            countUp(stat1, 0, 30, 1500);
+            countUp(stat2, 0, 50, 1500);
+            countUp(stat3, 0, 95, 1500, true);
+            countUp(stat4, 0, 30, 1500, true);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      
+      observer.observe(document.getElementById('stats'));
+    }
+
+    function countUp(element, start, end, duration, isPercent = false) {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = isPercent ? `${value}%` : `${value}+`;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    // Initialize stats animation
+    animateStats();
   </script>
 </body>
 </html>
