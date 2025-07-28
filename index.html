@@ -2,19 +2,18 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <title>Bijay Silwal – Senior QA & Security Engineer</title>
+  <title>Bijay Silwal – QA Test Engineer - Manual, Automation, Security</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Senior QA Engineer with 5+ years experience in test automation and security testing, recognized by Apple, Google, and BBC." />
   <meta property="og:title" content="Bijay Silwal – Senior QA & Security Engineer" />
   <meta property="og:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
-  <meta property="og:image" content="https://placehold.co/1200x630/f8f9fa/00d4aa?text=Bijay+Silwal+Portfolio" />
+  <meta property="og:image" content="https://i.ibb.co/wN9b6hLx/bj-1.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bijay Silwal – Senior QA & Security Engineer" />
-  <meta name="twitter:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
-  <meta name="twitter:image" content="https://placehold.co/1200x630/f8f9fa/00d4aa?text=Bijay+Silwal+Portfolio" />
-
+  <link rel="canonical" href="https://bijaysilwal.com" />
+  
   <!-- Preload critical resources -->
+  <link rel="preload" href="https://i.ibb.co/wN9b6hLx/bj-1.jpg" as="image" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" as="style" />
   <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
@@ -25,7 +24,7 @@
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   
   <style>
     :root {
@@ -38,6 +37,16 @@
       --font-body: 'Inter', sans-serif;
       --section-padding: 8rem;
       --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Dark Mode Variables */
+    :root.dark {
+      --bg: #1a1a1a;
+      --bg-alt: #2d2d2d;
+      --text: #f8f9fa;
+      --muted: #adb5bd;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
     * {
@@ -57,9 +66,17 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
+      transition: background 0.5s ease, color 0.3s ease;
     }
 
-    /* Improved Typography */
+    /* Focus States */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    /* Typography */
     h1, h2, h3, h4 {
       line-height: 1.2;
       font-weight: 700;
@@ -80,8 +97,13 @@
       padding: 1.5rem 2rem;
       border-bottom: 1px solid rgba(0, 168, 132, 0.1);
       z-index: 100;
-      transition: all 0.3s ease;
+      transition: var(--transition);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .dark nav {
+      background-color: rgba(26, 26, 26, 0.95);
+      border-bottom: 1px solid rgba(0, 168, 132, 0.2);
     }
 
     nav.scrolled {
@@ -101,21 +123,36 @@
       color: var(--muted);
       text-decoration: none;
       font-weight: 500;
-      transition: all 0.3s ease;
+      transition: var(--transition);
       padding: 0.5rem 1rem;
       border-radius: 4px;
       font-size: 0.95rem;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s ease;
     }
 
     nav ul li a:hover,
     nav ul li a:focus {
       color: var(--accent);
-      background-color: rgba(0, 168, 132, 0.05);
+    }
+
+    nav ul li a:hover::after,
+    nav ul li a:focus::after {
+      width: 100%;
     }
 
     nav ul li a.active {
       color: var(--accent);
-      background-color: rgba(0, 168, 132, 0.1);
     }
 
     /* Mobile Menu Toggle */
@@ -126,6 +163,26 @@
       color: var(--text);
       font-size: 1.5rem;
       cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+      transform: rotate(90deg);
+    }
+
+    /* Dark Mode Toggle */
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .theme-toggle:hover {
+      background: rgba(0, 168, 132, 0.1);
     }
 
     /* Hero Section */
@@ -137,7 +194,7 @@
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
       padding: 8rem 2rem 6rem;
     }
 
@@ -146,6 +203,22 @@
       margin: 0 auto;
       position: relative;
       z-index: 2;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 2rem;
+      border: 4px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(0, 168, 132, 0.2);
+      transition: var(--transition);
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 168, 132, 0.3);
     }
 
     .hero-text {
@@ -183,6 +256,12 @@
       border: 1px solid rgba(0, 168, 132, 0.1);
       width: 100%;
       max-width: 800px;
+      cursor: text;
+      transition: var(--transition);
+    }
+
+    #terminal:hover {
+      box-shadow: 0 8px 25px rgba(0, 168, 132, 0.1);
     }
 
     #terminal::after {
@@ -214,7 +293,7 @@
       border-radius: 8px;
       color: var(--accent);
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: var(--transition);
       font-weight: 600;
       font-size: 1.1rem;
       min-width: 180px;
@@ -249,6 +328,11 @@
       animation: bounce 2s infinite;
       z-index: 10;
       cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .scroll-down-indicator:hover {
+      color: var(--accent);
     }
 
     .scroll-down-indicator svg {
@@ -307,65 +391,21 @@
       border-radius: 2px;
     }
 
-    /* About Section */
-    #about .card {
-      background: white;
-      padding: 3rem;
-      border-radius: 12px;
-      border-left: 4px solid var(--accent);
-      box-shadow: var(--card-shadow);
-    }
-
-    #about p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      margin: 0 auto;
-      max-width: 1000px;
-    }
-
-    .skills-grid img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      transition: all 0.3s ease;
-      filter: grayscale(30%) brightness(1);
-    }
-
-    .skills-grid img:hover {
-      transform: scale(1.15);
-      filter: grayscale(0%) brightness(1.1);
-    }
-
-    /* Experience Cards */
-    .cards {
-      display: grid;
-      gap: 2.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    }
-
+    /* Cards */
     .card {
-      background: white;
+      background: var(--bg-alt);
       padding: 2.5rem;
       border-radius: 12px;
       border-left: 4px solid var(--accent);
-      transition: all 0.3s ease;
+      transition: var(--transition);
       display: flex;
       flex-direction: column;
       box-shadow: var(--card-shadow);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 168, 132, 0.1);
     }
 
     .card h3 {
@@ -400,11 +440,6 @@
       color: var(--accent);
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 168, 132, 0.1);
-    }
-
     /* Stats Section */
     #stats {
       background: var(--bg-alt);
@@ -424,7 +459,7 @@
       padding: 2rem;
       background: rgba(0, 168, 132, 0.05);
       border-radius: 8px;
-      transition: all 0.3s ease;
+      transition: var(--transition);
     }
 
     .stat-item:hover {
@@ -450,12 +485,17 @@
     }
 
     .testimonial {
-      background: white;
+      background: var(--bg-alt);
       padding: 2rem;
       border-radius: 8px;
       position: relative;
       border: 1px solid rgba(0, 168, 132, 0.1);
       box-shadow: var(--card-shadow);
+      transition: var(--transition);
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
     }
 
     .testimonial::before {
@@ -499,27 +539,6 @@
       margin-bottom: 0;
     }
 
-    /* Contact Section */
-    #contact .card {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
     /* Footer */
     footer {
       text-align: center;
@@ -538,11 +557,12 @@
     .social-links a {
       color: var(--muted);
       font-size: 1.5rem;
-      transition: color 0.3s ease;
+      transition: var(--transition);
     }
 
     .social-links a:hover {
       color: var(--accent);
+      transform: translateY(-3px);
     }
 
     .copyright {
@@ -564,7 +584,7 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 20px rgba(0, 168, 132, 0.3);
-      transition: all 0.3s ease;
+      transition: var(--transition);
       opacity: 0;
       visibility: hidden;
       z-index: 999;
@@ -578,18 +598,54 @@
     }
 
     #back-to-top:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.1);
       box-shadow: 0 8px 25px rgba(0, 168, 132, 0.4);
     }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* Dark Mode Toggle Switch */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
     }
 
-    .fade-in {
-      animation: fadeIn 0.8s ease forwards;
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--accent);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(30px);
     }
 
     /* Responsive Adjustments */
@@ -612,7 +668,7 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        background: white;
+        background: var(--bg-alt);
         padding: 1rem;
         border-radius: 8px;
         margin-top: 1rem;
@@ -629,6 +685,11 @@
 
       .hero-text h1 {
         font-size: 2.5rem;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
       }
 
       .cards {
@@ -658,6 +719,11 @@
         font-size: 2rem;
       }
 
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+
       #about .card,
       .card {
         padding: 1.5rem;
@@ -680,7 +746,7 @@
 
   <!-- Sticky Navbar -->
   <nav id="navbar">
-    <div class="container">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
       <button class="menu-toggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
@@ -693,6 +759,11 @@
         <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
         <li><a href="#credentials" class="nav-link">Credentials</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -700,16 +771,17 @@
   <!-- Hero Section -->
   <header id="hero">
     <div class="hero-content">
+      <img src="https://i.ibb.co/wN9b6hLx/bj-1.jpg" alt="Bijay Silwal" class="profile-photo fade-in" />
       <div class="hero-text fade-in">
         <h1>Bijay Silwal</h1>
         <p>Senior QA Engineer specializing in test automation and security testing</p>
         <pre id="terminal"></pre>
       </div>
       <div class="cta fade-in" style="animation-delay: 0.3s;">
-        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me">
+        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me" id="contact-btn">
           <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Contact Me
         </a>
-        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" class="btn secondary" aria-label="LinkedIn Profile">
+        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer" class="btn secondary" aria-label="LinkedIn Profile">
           <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn
         </a>
         <a href="#credentials" class="btn secondary" aria-label="View CV">
@@ -734,7 +806,7 @@
         Dynamic and impact-driven <span class="highlight">QA Engineer with 5+ years</span> of global experience across manual, automation, API, and security testing in Agile and DevSecOps environments. Demonstrated success in leading high-value QA transformations, pioneering test automation frameworks, and championing security-first QA practices.
       </p>
       <p>
-        Recognized by global tech leaders such as <span class="highlight">Apple, Google, and BBC</span> for exceptional security research. Adept at working independently and cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and cloud-native (SaaS) ecosystems.
+        Recognized by global tech leaders such as <span class="highlight">Apple, Google, Huawei, Quora, Sophos, Airship, UN, Zoho and BBC to name a few</span> for exceptional security research. Adept at working independently and cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and cloud-native (SaaS) ecosystems.
       </p>
       <p>
         My expertise spans from implementing scalable test automation frameworks to identifying critical security vulnerabilities, with a proven track record of improving testing efficiency by 30% or more across multiple organizations.
@@ -763,7 +835,6 @@
       <img src="https://skillicons.dev/icons?i=postman" alt="Postman" loading="lazy" />
       <img src="https://skillicons.dev/icons?i=figma" alt="Figma" loading="lazy" />
       <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" loading="lazy" />
-      <img src="https://skillicons.dev/icons?i=gcp" alt="Google Cloud" loading="lazy" />
     </div>
   </section>
 
@@ -961,11 +1032,11 @@
   <section id="interests">
     <h2 class="fade-in">Beyond Work</h2>
     <div class="card fade-in">
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <li class="flex items-center"><i data-lucide="shield" class="w-5 h-5 mr-3"></i> Cybersecurity CTFs (TryHackMe, HackTheBox)</li>
-        <li class="flex items-center"><i data-lucide="code" class="w-5 h-5 mr-3"></i> Building automation tools and productivity scripts</li>
-        <li class="flex items-center"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i> Technology books, philosophy, documentaries</li>
-        <li class="flex items-center"><i data-lucide="football" class="w-5 h-5 mr-3"></i> Football, hiking, and outdoor activities</li>
+      <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <li style="display: flex; align-items: center;"><i data-lucide="shield" class="w-5 h-5 mr-3"></i> Cybersecurity CTFs (TryHackMe, HackTheBox)</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="code" class="w-5 h-5 mr-3"></i> Building automation tools and productivity scripts</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i> Technology books, philosophy, documentaries</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="football" class="w-5 h-5 mr-3"></i> Football, hiking, and outdoor activities</li>
       </ul>
     </div>
   </section>
@@ -977,13 +1048,13 @@
   <section id="contact">
     <h2 class="fade-in">Get In Touch</h2>
     <div class="card fade-in">
-      <p class="text-center mb-6">
+      <p style="text-align: center; margin-bottom: 1.5rem;">
         I'm currently exploring new opportunities where I can leverage my expertise in QA automation and security testing. Whether you have a project to discuss or just want to connect, feel free to reach out.
       </p>
       <div class="contact-info">
         <div class="contact-item">
           <i data-lucide="mail" class="w-5 h-5"></i>
-          <a href="mailto:silwalbijay197@gmail.com" class="hover:text-accent">silwalbijay197@gmail.com</a>
+          <a href="mailto:silwalbijay197@gmail.com">silwalbijay197@gmail.com</a>
         </div>
         <div class="contact-item">
           <i data-lucide="phone" class="w-5 h-5"></i>
@@ -991,18 +1062,18 @@
         </div>
         <div class="contact-item">
           <i data-lucide="linkedin" class="w-5 h-5"></i>
-          <a href="https://linkedin.com/in/bijay-silwal" target="_blank" class="hover:text-accent">linkedin.com/in/bijay-silwal</a>
+          <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer">linkedin.com/in/bijay-silwal</a>
         </div>
         <div class="contact-item">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
           <span>Godavari, Lalitpur, Nepal</span>
         </div>
       </div>
-      <div class="cta mt-8">
+      <div class="cta" style="margin-top: 2rem;">
         <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Email Me">
           <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Email Me
         </a>
-        <a href="https://calendly.com/bijaysilwal" target="_blank" class="btn secondary" aria-label="Schedule Call">
+        <a href="https://calendly.com/bijaysilwal" target="_blank" rel="noopener noreferrer" class="btn secondary" aria-label="Schedule Call">
           <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> Schedule Call
         </a>
       </div>
@@ -1012,17 +1083,17 @@
   <!-- Footer -->
   <footer class="fade-in">
     <div class="social-links">
-      <a href="https://linkedin.com/in/bijay-silwal" target="_blank" aria-label="LinkedIn">
+      <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <i data-lucide="linkedin"></i>
       </a>
-      <a href="https://github.com/your-github-profile" target="_blank" aria-label="GitHub">
+      <a href="https://github.com/SilwalBijay" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <i data-lucide="github"></i>
       </a>
       <a href="mailto:silwalbijay197@gmail.com" aria-label="Email">
         <i data-lucide="mail"></i>
       </a>
     </div>
-    <p class="copyright">© 2025 Bijay Silwal. All rights reserved.</p>
+    <p class="copyright">© <span id="year"></span> Bijay Silwal. All rights reserved.</p>
   </footer>
 
   <!-- Back to Top Button -->
@@ -1034,51 +1105,84 @@
     // Initialize Lucide icons
     document.addEventListener('DOMContentLoaded', function() {
       lucide.createIcons();
+      
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
 
-    // --- Terminal typing effect
+    // --- Dark Mode Toggle ---
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
+    
+    // Set initial theme
+    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+      themeToggle.innerHTML = '<i data-lucide="sun"></i>';
+    } else {
+      themeToggle.innerHTML = '<i data-lucide="moon"></i>';
+    }
+    
+    // Toggle theme
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      themeToggle.innerHTML = isDark ? '<i data-lucide="sun"></i>' : '<i data-lucide="moon"></i>';
+      lucide.createIcons();
+    });
+
+    // --- Terminal typing effect ---
     const lines = [
       '$ whoami',
       'Bijay Silwal — Senior QA Engineer',
       '',
       '$ expertise',
-      '→ Test Automation | → Security Testing | → DevSecOps',
+      '→ Automation Testing | → Security Testing | → Manual Testing | → API Testing',
       '',
       '$ status',
-      '[ Available for Remote Opportunities ]',
-      ''
+      '[ Available for Challenging Opportunities ]',
+      '',
+      '$ click_terminal_for_more'
     ];
+    
     let lineIndex = 0, charIndex = 0;
     const terminal = document.getElementById('terminal');
+    let isTyping = true;
 
     function type() {
       if (lineIndex < lines.length) {
         if (charIndex < lines[lineIndex].length) {
           terminal.textContent += lines[lineIndex][charIndex++];
-          setTimeout(type, 30);
+          setTimeout(type, isTyping ? 30 : 0);
         } else {
           terminal.textContent += '\n';
           lineIndex++; charIndex = 0;
-          setTimeout(type, 200);
+          setTimeout(type, isTyping ? 200 : 0);
         }
+      } else {
+        isTyping = false;
       }
     }
 
-    // Start typing effect
-    window.onload = function() {
-      type();
-      
-      // Initialize animations
-      initAnimations();
-      
-      // Initialize mobile menu
-      initMobileMenu();
-      
-      // Initialize scroll events
-      initScrollEvents();
-    };
+    // Make terminal interactive
+    terminal.addEventListener('click', () => {
+      if (!isTyping) {
+        terminal.textContent = '$ ';
+        lines.push('$ contact --email silwalbijay197@gmail.com');
+        lines.push('$ view --cv Bijay_Silwal_QA_CV_2025.pdf');
+        lines.push('$ connect --linkedin bijay-silwal');
+        lineIndex = lines.length - 3;
+        charIndex = 0;
+        isTyping = true;
+        type();
+      }
+    });
 
-    // --- Mobile Menu Toggle
+    // Start typing effect
+    type();
+    
+    // --- Mobile Menu Toggle ---
     function initMobileMenu() {
       const menuToggle = document.querySelector('.menu-toggle');
       const navMenu = document.getElementById('nav-menu');
@@ -1105,7 +1209,7 @@
       });
     }
 
-    // --- Scroll Events
+    // --- Scroll Events ---
     function initScrollEvents() {
       // Navbar scroll effect
       const navbar = document.getElementById('navbar');
@@ -1156,9 +1260,14 @@
           }
         });
       });
+      
+      // Back to top button
+      document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     }
 
-    // --- Animations
+    // --- Animations ---
     function initAnimations() {
       const fadeElements = document.querySelectorAll('.fade-in');
       
@@ -1216,7 +1325,19 @@
       window.requestAnimationFrame(step);
     }
 
-    // Initialize stats animation
+    // Confetti effect on contact button
+    document.getElementById('contact-btn')?.addEventListener('click', () => {
+      confetti({
+        particleCount: 50,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+
+    // Initialize everything
+    initMobileMenu();
+    initScrollEvents();
+    initAnimations();
     animateStats();
   </script>
 </body>
