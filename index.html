@@ -58,6 +58,13 @@
       box-sizing: border-box;
     }
 
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -113,8 +120,15 @@
     }
 
     nav.scrolled {
-      padding: 1rem 2rem;
+      padding: 1rem 0;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
     }
 
     nav ul {
@@ -189,6 +203,26 @@
 
     .theme-toggle:hover {
       background: rgba(0, 168, 132, 0.1);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skills-grid img {
+      height: 50px;
+      width: auto;
+      transition: var(--transition);
+      cursor: help;
+    }
+
+    .skills-grid img:hover {
+      transform: translateY(-5px) scale(1.1);
     }
 
     /* Hero Section */
@@ -293,6 +327,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 1.5rem;
       margin-top: 1.5rem;
       font-size: 0.9rem;
@@ -798,7 +833,7 @@
 
   <!-- Sticky Navbar -->
   <nav id="navbar">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="container">
       <button class="menu-toggle" aria-label="Toggle menu">
         <i data-lucide="menu"></i>
       </button>
@@ -833,15 +868,17 @@
       <img src="https://i.ibb.co/wN9b6hLx/bj-1.jpg" alt="Bijay Silwal" class="profile-photo fade-in" />
       <div class="hero-text fade-in">
         <h1>Bijay Silwal</h1>
-        <p>QA Automation Engineer specializing in Reliable and Secure Systems</p>
+        <p>Software QA Engineer | Automation & Security | SaaS & Enterprise Platforms</p>
         <pre id="terminal"></pre>
         <div class="recognized-strip fade-in" style="animation-delay: 0.5s;">
           <span>Recognized by:</span>
           <div class="mini-logos">
-            <span title="Google Security Foundation">Google</span>
+            <span title="Google Security Research">Google</span>
             <span title="Apple Security Research">Apple</span>
+            <span title="Huawei PSIRT Acknowledgement">Huawei</span>
+            <span title="United Nations Hall of Fame">UN</span>
             <span title="BBC Security Wall of Fame">BBC</span>
-            <span title="Airship Security">Airship</span>
+            <span title="Airship Security Recognition">Airship</span>
           </div>
         </div>
       </div>
@@ -1096,6 +1133,36 @@
             <span>March 2021</span>
           </div>
           <p>Recognized for identifying HTML Injection vulnerabilities and improving platform security.</p>
+        </div>
+      </div>
+
+      <!-- Huawei Acknowledgement -->
+      <div class="hof-card">
+        <div class="hof-img-container">
+          <img src="assets/hall-of-fame/huawei_acknowledgement.png" alt="Huawei Acknowledgement"
+            class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>Huawei Acknowledgment</h3>
+          <div class="hof-meta">
+            <span>October 2021 Recognition</span>
+          </div>
+          <p>Official Letter of Acknowledgment from Huawei PSIRT for identifying and reporting security issues.</p>
+        </div>
+      </div>
+
+      <!-- UN HoF -->
+      <div class="hof-card">
+        <div class="hof-img-container" style="background: #fff;">
+          <img src="assets/hall-of-fame/un_hof.png" alt="United Nations Hall of Fame" class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>United Nations HoF</h3>
+          <div class="hof-meta">
+            <span>January 2020</span>
+          </div>
+          <p>Recognized on the Unite.UN.org Hall of Fame for reporting a critical security misconfiguration
+            vulnerability.</p>
         </div>
       </div>
 
