@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <title>Bijay Silwal – QA Test Engineer - Manual, Automation, Security</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SSDET/QA with 5+ years experience in Test Automation and Security Testing, recognized by Apple, Google, and BBC." />
-  <meta property="og:title" content="Bijay Silwal – SDET/QA Engineer & Security Engineer" />
-  <meta property="og:description" content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
+  <meta name="description"
+    content="QA with 5+ years experience in Test Automation and Security Testing, recognized by Apple, Google, and BBC." />
+  <meta property="og:title" content="Bijay Silwal – QA Automation Engineer & Security Engineer" />
+  <meta property="og:description"
+    content="QA/Security expert recognized by Apple, Google, BBC. Available for remote opportunities." />
   <meta property="og:image" content="https://i.ibb.co/wN9b6hLx/bj-1.jpg" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="canonical" href="https://bijaysilwal.com" />
-  
+
   <!-- Preload critical resources -->
   <link rel="preload" href="https://i.ibb.co/wN9b6hLx/bj-1.jpg" as="image" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+    as="style" />
   <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
-  
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  
+
   <style>
     :root {
       --bg: #f8f9fa;
@@ -77,7 +80,10 @@
     }
 
     /* Typography */
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
       line-height: 1.2;
       font-weight: 700;
     }
@@ -245,7 +251,7 @@
       white-space: pre-wrap;
       line-height: 1.6;
       color: var(--accent);
-      min-height: 10em;
+      min-height: 32em;
       display: inline-block;
       text-align: left;
       position: relative;
@@ -271,8 +277,46 @@
     }
 
     @keyframes blink-caret {
-      from, to { color: transparent }
-      50% { color: var(--accent); }
+
+      from,
+      to {
+        color: transparent
+      }
+
+      50% {
+        color: var(--accent);
+      }
+    }
+
+    /* Recognized Strip */
+    .recognized-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      opacity: 0.8;
+    }
+
+    .mini-logos {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+
+    .mini-logos span {
+      position: relative;
+      transition: var(--transition);
+      cursor: help;
+    }
+
+    .mini-logos span:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
     }
 
     /* CTA Buttons */
@@ -342,12 +386,19 @@
     }
 
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
         transform: translateY(0) translateX(-50%);
       }
+
       40% {
         transform: translateY(-10px) translateX(-50%);
       }
+
       60% {
         transform: translateY(-5px) translateX(-50%);
       }
@@ -640,11 +691,11 @@
       border-radius: 50%;
     }
 
-    input:checked + .slider {
+    input:checked+.slider {
       background-color: var(--accent);
     }
 
-    input:checked + .slider:before {
+    input:checked+.slider:before {
       transform: translateX(30px);
     }
 
@@ -742,6 +793,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Sticky Navbar -->
@@ -755,10 +807,17 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#hall-of-fame" class="nav-link">Hall of Fame</a></li>
         <li><a href="#stats" class="nav-link">Impact</a></li>
         <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
         <li><a href="#credentials" class="nav-link">Credentials</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#hall-of-fame" class="theme-toggle" title="Hall of Fame"
+            style="display: flex; align-items: center; text-decoration: none;">
+            <i data-lucide="award"></i>
+          </a>
+        </li>
         <li>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             <i data-lucide="moon"></i>
@@ -774,14 +833,24 @@
       <img src="https://i.ibb.co/wN9b6hLx/bj-1.jpg" alt="Bijay Silwal" class="profile-photo fade-in" />
       <div class="hero-text fade-in">
         <h1>Bijay Silwal</h1>
-        <p>SDET/QA Engineer specializing in Test Automation and Security Testing</p>
+        <p>QA Automation Engineer specializing in Reliable and Secure Systems</p>
         <pre id="terminal"></pre>
+        <div class="recognized-strip fade-in" style="animation-delay: 0.5s;">
+          <span>Recognized by:</span>
+          <div class="mini-logos">
+            <span title="Google Security Foundation">Google</span>
+            <span title="Apple Security Research">Apple</span>
+            <span title="BBC Security Wall of Fame">BBC</span>
+            <span title="Airship Security">Airship</span>
+          </div>
+        </div>
       </div>
       <div class="cta fade-in" style="animation-delay: 0.3s;">
         <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me" id="contact-btn">
           <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Contact Me
         </a>
-        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer" class="btn secondary" aria-label="LinkedIn Profile">
+        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer" class="btn secondary"
+          aria-label="LinkedIn Profile">
           <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn
         </a>
         <a href="#credentials" class="btn secondary" aria-label="View CV">
@@ -803,13 +872,21 @@
     <h2 class="fade-in">Professional Profile</h2>
     <div class="card fade-in">
       <p>
-        Dynamic and impact-driven <span class="highlight">SDET/Software QA Engineer with 5+ years</span> of global experience across manual, automation, API, and security testing in Agile and DevSecOps environments. Demonstrated success in leading high-value QA transformations, pioneering test automation frameworks, and championing security-first QA practices.
+        Dynamic and impact-driven <span class="highlight">QA Automation Engineer with 5+ years</span> of global
+        experience across manual, automation, API, and security testing in Agile and DevSecOps environments.
+        Demonstrated success in leading high-value QA transformations, pioneering test automation frameworks, and
+        championing security-first QA practices.
       </p>
       <p>
-        Recognized by global tech leaders such as <span class="highlight">Apple, Google, Huawei, Quora, Sophos, Airship, UN, Zoho and BBC to name a few</span> for exceptional security research. Adept at working independently and cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and cloud-native (SaaS) ecosystems.
+        Recognized by global tech leaders such as <span class="highlight">Apple, Google, Huawei, Quora, Sophos, Airship,
+          UN, Zoho and BBC to name a few</span> for exceptional security research. Adept at working independently and
+        cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and
+        cloud-native (SaaS) ecosystems.
       </p>
       <p>
-        My expertise spans from implementing scalable test automation frameworks to identifying critical security vulnerabilities, with a proven track record of improving testing efficiency by 30% or more across multiple organizations.
+        My expertise spans from implementing scalable test automation frameworks to identifying critical security
+        vulnerabilities, with a proven track record of improving testing efficiency by 30% or more across multiple
+        organizations.
       </p>
     </div>
   </section>
@@ -846,34 +923,47 @@
     <h2 class="fade-in">Professional Experience</h2>
     <div class="cards">
       <div class="card fade-in">
-        <h3>SDET/Software Engineer QA – LogPoint</h3>
+        <h3>QA Automation Engineer – LogPoint</h3>
         <span class="date">December 2022 – Present</span>
         <ul>
-          <li>Spearheaded the migration from legacy Robot Framework to a scalable Playwright + TypeScript automation framework, reducing regression time by 30% and increasing test coverage by 30%</li>
-          <li>Developed robust automation for critical business workflows including RBAC, log search, repository creation, and normalization across both on-prem and SaaS deployments</li>
-          <li>Conducted comprehensive manual, API, and security testing of SIEM/SOAR features, identifying over 50+ critical vulnerabilities in distributed environments</li>
-          <li>Engineered custom Postfix-based SMTP testing tools and authored centralized technical documentation to enhance organization-wide knowledge sharing</li>
-          <li>Established and led the QA Idea Portal, implementing 15+ scalable QA enhancements including Docker-based automation and Jenkins deployment jobs</li>
-          <li>Automated SaaS release pipelines with integrated smoke testing, reducing deployment risks and enabling faster rollouts</li>
-          <li>Investigated infrastructure bottlenecks and proposed containerization strategies using Docker and parallel execution with Pabot</li>
+          <li>Spearheaded the migration from legacy Robot Framework to a scalable Playwright + TypeScript automation
+            framework, reducing regression time by 30% and increasing test coverage by 30%</li>
+          <li>Developed robust automation for critical business workflows including RBAC, log search, repository
+            creation, and normalization across both on-prem and SaaS deployments</li>
+          <li>Conducted comprehensive manual, API, and security testing of SIEM/SOAR features, identifying over 50+
+            critical vulnerabilities in distributed environments</li>
+          <li>Engineered custom Postfix-based SMTP testing tools and authored centralized technical documentation to
+            enhance organization-wide knowledge sharing</li>
+          <li>Established and led the QA Idea Portal, implementing 15+ scalable QA enhancements including Docker-based
+            automation and Jenkins deployment jobs</li>
+          <li>Automated SaaS release pipelines with integrated smoke testing, reducing deployment risks and enabling
+            faster rollouts</li>
+          <li>Investigated infrastructure bottlenecks and proposed containerization strategies using Docker and parallel
+            execution with Pabot</li>
         </ul>
       </div>
       <div class="card fade-in" style="animation-delay: 0.2s;">
         <h3>Associate Software QA Engineer – CloudFactory</h3>
         <span class="date">February 2022 – November 2022</span>
         <ul>
-          <li>Executed high-quality testing for APIs, infrastructure, and frontend systems with a 95%+ defect detection rate</li>
-          <li>Conducted web security validation using Burp Suite and OWASP ZAP, effectively mitigating OWASP vulnerabilities</li>
-          <li>Led post-release deployment testing and feedback cycles, ensuring rapid iteration and maintaining low customer defect rates</li>
+          <li>Executed high-quality testing for APIs, infrastructure, and frontend systems with a 95%+ defect detection
+            rate</li>
+          <li>Conducted web security validation using Burp Suite and OWASP ZAP, effectively mitigating OWASP
+            vulnerabilities</li>
+          <li>Led post-release deployment testing and feedback cycles, ensuring rapid iteration and maintaining low
+            customer defect rates</li>
         </ul>
       </div>
       <div class="card fade-in" style="animation-delay: 0.4s;">
         <h3>Security Researcher (Freelance)</h3>
         <span class="date">June 2019 – Present</span>
         <ul>
-          <li>Discovered and reported 30+ critical vulnerabilities for tech giants including Google, Apple, Huawei, and BBC, earning Hall of Fame recognition and bounties</li>
-          <li>Specialized in OWASP Top 10 vulnerabilities including XSS, CORS, IDOR, and authentication flaws, collaborating with security teams on remediation</li>
-          <li>Created comprehensive vulnerability reports with detailed mitigation recommendations and proof-of-concept exploits</li>
+          <li>Discovered and reported 30+ critical vulnerabilities for tech giants including Google, Apple, Huawei, and
+            BBC, earning Hall of Fame recognition and bounties</li>
+          <li>Specialized in OWASP Top 10 vulnerabilities including XSS, CORS, IDOR, and authentication flaws,
+            collaborating with security teams on remediation</li>
+          <li>Created comprehensive vulnerability reports with detailed mitigation recommendations and proof-of-concept
+            exploits</li>
           <li><strong>Key Achievements:</strong>
             <ul style="margin-top: 0.5rem;">
               <li>Apple: Discovered sensitive CORS misconfigurations protecting confidential APIs</li>
@@ -940,6 +1030,211 @@
   <!-- Divider -->
   <div class="section-divider"></div>
 
+  <!-- HALL OF FAME -->
+  <section id="hall-of-fame">
+    <h2 class="fade-in">Security Hall of Fame</h2>
+    <p class="fade-in" style="text-align: center; max-width: 800px; margin: -1.5rem auto 3rem; color: var(--muted);">
+      Recognized by world-leading technology companies for identifying and responsibly disclosing critical security
+      vulnerabilities.
+    </p>
+
+    <div class="hof-grid fade-in">
+      <!-- Google HoF -->
+      <a href="https://bughunters.google.com/profile/50088c67-2864-4375-815d-47856725311a" target="_blank"
+        class="hof-card">
+        <div class="hof-img-container">
+          <img src="https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+            alt="Google Hall of Fame" class="hof-logo" />
+        </div>
+        <div class="hof-info">
+          <h3>Google Hall of Fame</h3>
+          <div class="hof-meta">
+            <span>Special Recognition</span>
+          </div>
+          <p>Security Researcher recognition for identifying critical vulnerabilities in internal tools.</p>
+          <span class="btn-text">View Profile <i data-lucide="external-link"></i></span>
+        </div>
+      </a>
+
+      <!-- Apple HoF -->
+      <div class="hof-card">
+        <div class="hof-img-container">
+          <img src="assets/hall-of-fame/apple_hof.png" alt="Apple Hall of Fame" class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>Apple Acknowledgments</h3>
+          <div class="hof-meta">
+            <span>March 2021 Recognition</span>
+          </div>
+          <p>Official recognition on Apple's security researchers page for identifying sensitive CORS misconfigurations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Airship HoF -->
+      <div class="hof-card">
+        <div class="hof-img-container">
+          <img src="assets/hall-of-fame/airship_hof.png" alt="Airship Hall of Fame" class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>Airship Hall of Fame</h3>
+          <div class="hof-meta">
+            <span>SSTI Finding</span>
+          </div>
+          <p>Acknowledged for discovering Server-Side Template Injection (SSTI) leading to potential RCE.</p>
+        </div>
+      </div>
+
+      <!-- BBC HoF -->
+      <div class="hof-card">
+        <div class="hof-img-container">
+          <img src="assets/hall-of-fame/bbc_hof.png" alt="BBC Hall of Fame" class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>BBC Security Wall of Fame</h3>
+          <div class="hof-meta">
+            <span>March 2021</span>
+          </div>
+          <p>Recognized for identifying HTML Injection vulnerabilities and improving platform security.</p>
+        </div>
+      </div>
+
+      <!-- PNPT Cert -->
+      <div class="hof-card">
+        <div class="hof-img-container">
+          <img src="assets/hall-of-fame/pnpt_cert.png" alt="PNPT Certification" class="hof-screenshot" />
+        </div>
+        <div class="hof-info">
+          <h3>PNPT Certification</h3>
+          <div class="hof-meta">
+            <span>October 2021</span>
+          </div>
+          <p>Practical Network Penetration Tester certification - Validating deep technical offensive security skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .hof-card {
+      background: var(--bg-alt);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 168, 132, 0.1);
+      transition: var(--transition);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--card-shadow);
+    }
+
+    .hof-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 168, 132, 0.15);
+      border-color: var(--accent);
+    }
+
+    .hof-img-container {
+      width: 100%;
+      height: 220px;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(0, 168, 132, 0.05);
+    }
+
+    .dark .hof-img-container {
+      background: #252525;
+    }
+
+    .hof-screenshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      transition: var(--transition);
+    }
+
+    .hof-card:hover .hof-screenshot {
+      transform: scale(1.03);
+    }
+
+    .hof-logo {
+      max-width: 50%;
+      height: auto;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .hof-info {
+      padding: 1.75rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hof-meta {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      background: rgba(0, 168, 132, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      width: fit-content;
+    }
+
+    .hof-info h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .hof-info p {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-text {
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: auto;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hof-img-container {
+        height: 200px;
+      }
+    }
+  </style>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
+
   <!-- STATS -->
   <section id="stats">
     <h2 class="fade-in">Professional Impact</h2>
@@ -972,7 +1267,10 @@
     <div class="testimonials fade-in">
       <div class="testimonial">
         <div class="testimonial-content">
-          <p>"Bijay's automation framework migration to Playwright transformed our testing capabilities. His technical expertise and leadership in implementing the new framework resulted in a 30% reduction in regression time while increasing coverage. His ability to present complex technical concepts to leadership was particularly impressive."</p>
+          <p>"Bijay's automation framework migration to Playwright transformed our testing capabilities. His technical
+            expertise and leadership in implementing the new framework resulted in a 30% reduction in regression time
+            while increasing coverage. His ability to present complex technical concepts to leadership was particularly
+            impressive."</p>
         </div>
         <div class="testimonial-author">
           <img src="https://placehold.co/100x100/e9ecef/00a884?text=NM" alt="Niraj Maharjan" loading="lazy" />
@@ -984,7 +1282,9 @@
       </div>
       <div class="testimonial" style="animation-delay: 0.2s;">
         <div class="testimonial-content">
-          <p>"The SMTP testing tool Bijay developed became an essential part of our QA infrastructure. His solution eliminated false positives in our email testing and his documentation made it easy for the entire team to adopt. His contributions to our knowledge-sharing culture have had lasting impact."</p>
+          <p>"The SMTP testing tool Bijay developed became an essential part of our QA infrastructure. His solution
+            eliminated false positives in our email testing and his documentation made it easy for the entire team to
+            adopt. His contributions to our knowledge-sharing culture have had lasting impact."</p>
         </div>
         <div class="testimonial-author">
           <img src="https://placehold.co/100x100/e9ecef/00a884?text=UK" alt="Ujjwal Karna" loading="lazy" />
@@ -1019,8 +1319,9 @@
       <div class="card fade-in" style="animation-delay: 0.2s;">
         <h3><i data-lucide="graduation-cap" class="w-6 h-6 mr-2 inline-block"></i> Education</h3>
         <p><strong>Bachelor of Science, Computer Science and Information Technology</strong><br>
-        Patan Multiple Campus, Tribhuvan University (2016–2020)<br>
-        <em>Graduation delayed to 2021 due to COVID-19</em></p>
+          Patan Multiple Campus, Tribhuvan University (2016–2020)<br>
+          <em>Graduation delayed to 2021 due to COVID-19</em>
+        </p>
       </div>
     </div>
   </section>
@@ -1033,10 +1334,14 @@
     <h2 class="fade-in">Beyond Work</h2>
     <div class="card fade-in">
       <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-        <li style="display: flex; align-items: center;"><i data-lucide="shield" class="w-5 h-5 mr-3"></i> Cybersecurity CTFs (TryHackMe, HackTheBox)</li>
-        <li style="display: flex; align-items: center;"><i data-lucide="code" class="w-5 h-5 mr-3"></i> Building automation tools and productivity scripts</li>
-        <li style="display: flex; align-items: center;"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i> Technology books, philosophy, documentaries</li>
-        <li style="display: flex; align-items: center;"><i data-lucide="football" class="w-5 h-5 mr-3"></i> Football, hiking, and outdoor activities</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="shield" class="w-5 h-5 mr-3"></i> Cybersecurity
+          CTFs (TryHackMe, HackTheBox)</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="code" class="w-5 h-5 mr-3"></i> Building
+          automation tools and productivity scripts</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="book-open" class="w-5 h-5 mr-3"></i> Technology
+          books, philosophy, documentaries</li>
+        <li style="display: flex; align-items: center;"><i data-lucide="football" class="w-5 h-5 mr-3"></i> Football,
+          hiking, and outdoor activities</li>
       </ul>
     </div>
   </section>
@@ -1049,7 +1354,8 @@
     <h2 class="fade-in">Get In Touch</h2>
     <div class="card fade-in">
       <p style="text-align: center; margin-bottom: 1.5rem;">
-        I'm currently exploring new opportunities where I can leverage my expertise in QA automation and security testing. Whether you have a project to discuss or just want to connect, feel free to reach out.
+        I'm currently exploring new opportunities where I can leverage my expertise in QA automation and security
+        testing. Whether you have a project to discuss or just want to connect, feel free to reach out.
       </p>
       <div class="contact-info">
         <div class="contact-item">
@@ -1062,7 +1368,8 @@
         </div>
         <div class="contact-item">
           <i data-lucide="linkedin" class="w-5 h-5"></i>
-          <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer">linkedin.com/in/bijay-silwal</a>
+          <a href="https://linkedin.com/in/bijay-silwal" target="_blank"
+            rel="noopener noreferrer">linkedin.com/in/bijay-silwal</a>
         </div>
         <div class="contact-item">
           <i data-lucide="map-pin" class="w-5 h-5"></i>
@@ -1073,7 +1380,8 @@
         <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Email Me">
           <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Email Me
         </a>
-        <a href="https://calendly.com/bijaysilwal" target="_blank" rel="noopener noreferrer" class="btn secondary" aria-label="Schedule Call">
+        <a href="https://calendly.com/bijaysilwal" target="_blank" rel="noopener noreferrer" class="btn secondary"
+          aria-label="Schedule Call">
           <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> Schedule Call
         </a>
       </div>
@@ -1103,9 +1411,9 @@
 
   <script>
     // Initialize Lucide icons
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       lucide.createIcons();
-      
+
       // Set current year in footer
       document.getElementById('year').textContent = new Date().getFullYear();
     });
@@ -1114,7 +1422,7 @@
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedTheme = localStorage.getItem('theme');
-    
+
     // Set initial theme
     if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
       document.documentElement.classList.add('dark');
@@ -1122,7 +1430,7 @@
     } else {
       themeToggle.innerHTML = '<i data-lucide="moon"></i>';
     }
-    
+
     // Toggle theme
     themeToggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
@@ -1135,17 +1443,26 @@
     // --- Terminal typing effect ---
     const lines = [
       '$ whoami',
-      'Bijay Silwal — SDET/Software QA Engineer',
+      'Bijay Silwal — QA Automation Engineer',
       '',
-      '$ expertise',
-      '→ Automation Testing | → Security Testing | → Manual Testing | → API Testing | → Load/Performance/Stress Testing, Full-Stack Quality Engineering',
+      '$ core_expertise',
+      '→ Playwright (TypeScript) Automation',
+      '→ API & Integration Testing',
+      '→ Security-Aware QA (OWASP, Real-World Vulnerability Research)',
+      '→ CI/CD-Integrated Test Strategies',
+      '',
+      '$ impact',
+      '→ Faster, safer releases',
+      '→ Reduced regression risk',
+      '→ Security issues found before production',
       '',
       '$ status',
-      '[ Available for Challenging Opportunities ]',
+      'Open to Global Opportunities',
       '',
-      '$ click_terminal_for_more'
+      '$ mission',
+      'Build reliable, secure systems by breaking them before attackers do'
     ];
-    
+
     let lineIndex = 0, charIndex = 0;
     const terminal = document.getElementById('terminal');
     let isTyping = true;
@@ -1181,13 +1498,13 @@
 
     // Start typing effect
     type();
-    
+
     // --- Mobile Menu Toggle ---
     function initMobileMenu() {
       const menuToggle = document.querySelector('.menu-toggle');
       const navMenu = document.getElementById('nav-menu');
-      
-      menuToggle.addEventListener('click', function() {
+
+      menuToggle.addEventListener('click', function () {
         navMenu.classList.toggle('show');
         const icon = menuToggle.querySelector('i');
         if (navMenu.classList.contains('show')) {
@@ -1197,10 +1514,10 @@
         }
         lucide.createIcons();
       });
-      
+
       // Close menu when clicking on a link
       document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
           navMenu.classList.remove('show');
           const icon = menuToggle.querySelector('i');
           icon.setAttribute('data-lucide', 'menu');
@@ -1213,13 +1530,13 @@
     function initScrollEvents() {
       // Navbar scroll effect
       const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
           navbar.classList.add('scrolled');
         } else {
           navbar.classList.remove('scrolled');
         }
-        
+
         // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
         if (window.scrollY > 300) {
@@ -1227,13 +1544,13 @@
         } else {
           backToTopButton.classList.remove('show');
         }
-        
+
         // Active nav link
         document.querySelectorAll('section').forEach(section => {
           const sectionTop = section.offsetTop - 100;
           const sectionHeight = section.offsetHeight;
           const sectionId = section.getAttribute('id');
-          
+
           if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
             document.querySelectorAll('.nav-link').forEach(link => {
               link.classList.remove('active');
@@ -1244,14 +1561,14 @@
           }
         });
       });
-      
+
       // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
           e.preventDefault();
           const targetId = this.getAttribute('href');
           const targetElement = document.querySelector(targetId);
-          
+
           if (targetElement) {
             window.scrollTo({
               top: targetElement.offsetTop - 80,
@@ -1260,7 +1577,7 @@
           }
         });
       });
-      
+
       // Back to top button
       document.getElementById('back-to-top').addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1270,7 +1587,7 @@
     // --- Animations ---
     function initAnimations() {
       const fadeElements = document.querySelectorAll('.fade-in');
-      
+
       const fadeInObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1280,7 +1597,7 @@
           }
         });
       }, { threshold: 0.1 });
-      
+
       fadeElements.forEach(element => {
         element.style.opacity = 0;
         element.style.transform = 'translateY(20px)';
@@ -1295,7 +1612,7 @@
       const stat2 = document.getElementById('stat2');
       const stat3 = document.getElementById('stat3');
       const stat4 = document.getElementById('stat4');
-      
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1307,7 +1624,7 @@
           }
         });
       }, { threshold: 0.5 });
-      
+
       observer.observe(document.getElementById('stats'));
     }
 
@@ -1341,4 +1658,5 @@
     animateStats();
   </script>
 </body>
+
 </html>
