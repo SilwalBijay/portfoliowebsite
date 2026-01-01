@@ -1172,8 +1172,7 @@
       </div>
 
       <!-- PNPT Cert -->
-      <a href="https://www.credential.net/c692856f-dbdd-4b33-9cb6-fec36642db3c?key=3201c7761ae6afc825cf5ebf094d083dd40b64dd82b296e36c836d082e588cb4#acc.iz59AJXM"
-        target="_blank" rel="noopener noreferrer" class="hof-card">
+      <div class="hof-card">
         <div class="hof-img-container">
           <img src="assets/hall-of-fame/pnpt_cert.png" alt="PNPT Certification" class="hof-screenshot" />
         </div>
@@ -1184,9 +1183,8 @@
           </div>
           <p>Practical Network Penetration Tester certification - Validating deep technical offensive security skills.
           </p>
-          <span class="btn-text">View Certificate <i data-lucide="external-link" class="w-4 h-4"></i></span>
         </div>
-      </a>
+      </div>
     </div>
   </section>
 
@@ -1381,16 +1379,12 @@
       <div class="card fade-in">
         <h3><i data-lucide="award" class="w-6 h-6 mr-2 inline-block"></i> Certifications</h3>
         <ul>
-          <li><strong>Practical Network Penetration Tester (PNPT)</strong> - The Cyber Mentor (October 2021)
-            <a href="https://www.credential.net/c692856f-dbdd-4b33-9cb6-fec36642db3c?key=3201c7761ae6afc825cf5ebf094d083dd40b64dd82b296e36c836d082e588cb4#acc.iz59AJXM"
-              target="_blank" rel="noopener noreferrer"
-              style="color: var(--accent); text-decoration: none; margin-left: 0.5rem; font-weight: 600;">(View)</a>
-          </li>
+          <li><strong>Practical Network Penetration Tester (PNPT)</strong> - The Cyber Mentor (October 2021)</li>
           <li><strong>AWS Solution Architect Associate</strong> - In Progress</li>
         </ul>
         <h3 class="mt-6"><i data-lucide="file-text" class="w-6 h-6 mr-2 inline-block"></i> Curriculum Vitae</h3>
         <p class="mt-2">Download my complete CV for detailed professional history:</p>
-        <a href="docs/Bijay_Silwal_CV_2026.pdf" download class="btn primary mt-4" aria-label="Download CV">
+        <a href="docs/Bijay_Silwal_QA_CV_2025.pdf" download class="btn primary mt-4" aria-label="Download CV">
           <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download CV (PDF)
         </a>
       </div>
@@ -1559,6 +1553,20 @@
         isTyping = false;
       }
     }
+
+    // Make terminal interactive
+    terminal.addEventListener('click', () => {
+      if (!isTyping) {
+        terminal.textContent = '$ ';
+        lines.push('$ contact --email silwalbijay197@gmail.com');
+        lines.push('$ view --cv Bijay_Silwal_QA_CV_2025.pdf');
+        lines.push('$ connect --linkedin bijay-silwal');
+        lineIndex = lines.length - 3;
+        charIndex = 0;
+        isTyping = true;
+        type();
+      }
+    });
 
     // Start typing effect
     type();
