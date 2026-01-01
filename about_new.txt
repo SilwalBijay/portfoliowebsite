@@ -1,0 +1,24 @@
+  <!-- ABOUT ME -->
+  <section id="about">
+    <h2 class="fade-in">Professional Profile</h2>
+    <div class="card fade-in">
+      <p>
+        Dynamic and impact-driven <span class="highlight">QA Automation Engineer with 5+ years</span> of global
+        experience across manual, automation, API, and security testing in Agile and DevSecOps environments.
+        Demonstrated success in leading high-value QA transformations, pioneering test automation frameworks, and
+        championing security-first QA practices.
+      </p>
+      <p>
+        Recognized by global tech leaders such as <span class="highlight">Apple, Google, Huawei, Quora, Sophos, Airship,
+          UN, Zoho and BBC to name a few</span> for exceptional security research. Adept at working independently and
+        cross-functionally in distributed, multicultural teams to deliver quality at speed in both on-premise and
+        cloud-native (SaaS) ecosystems.
+      </p>
+      <p>
+        My expertise spans from implementing scalable test automation frameworks to identifying critical security
+        vulnerabilities, with a proven track record of improving testing efficiency by 30% or more across multiple
+        organizations.
+      </p>
+    </div>
+  </section>
+

@@ -1,0 +1,71 @@
+  <nav id="navbar">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#hall-of-fame" class="nav-link">Hall of Fame</a></li>
+        <li><a href="#stats" class="nav-link">Impact</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="#hall-of-fame" class="theme-toggle" title="Hall of Fame"
+            style="display: flex; align-items: center; text-decoration: none;">
+            <i data-lucide="award"></i>
+          </a>
+        </li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero">
+    <div class="hero-content">
+      <img src="https://i.ibb.co/wN9b6hLx/bj-1.jpg" alt="Bijay Silwal" class="profile-photo fade-in" />
+      <div class="hero-text fade-in">
+        <h1>Bijay Silwal</h1>
+        <p>Software QA Engineer | Automation & Security | SaaS & Enterprise Platforms</p>
+        <pre id="terminal"></pre>
+        <div class="recognized-strip fade-in" style="animation-delay: 0.5s;">
+          <span>Recognized by:</span>
+          <div class="mini-logos">
+            <span title="Google Security Research">Google</span>
+            <span title="Apple Security Research">Apple</span>
+            <span title="Huawei PSIRT Acknowledgement">Huawei</span>
+            <span title="United Nations Hall of Fame">UN</span>
+            <span title="BBC Security Wall of Fame">BBC</span>
+            <span title="Airship Security Recognition">Airship</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta fade-in" style="animation-delay: 0.3s;">
+        <a href="mailto:silwalbijay197@gmail.com" class="btn primary" aria-label="Hire Me" id="contact-btn">
+          <i data-lucide="mail" class="w-5 h-5 mr-2"></i> Contact Me
+        </a>
+        <a href="https://linkedin.com/in/bijay-silwal" target="_blank" rel="noopener noreferrer" class="btn secondary"
+          aria-label="LinkedIn Profile">
+          <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i> LinkedIn
+        </a>
+        <a href="#credentials" class="btn secondary" aria-label="View CV">
+          <i data-lucide="file-text" class="w-5 h-5 mr-2"></i> View CV
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down-indicator" aria-label="Scroll down">
+      Scroll Down
+      <svg data-lucide="chevron-down"></svg>
+    </a>
+  </header>
+
+  <!-- Divider -->
+  <div class="section-divider"></div>
